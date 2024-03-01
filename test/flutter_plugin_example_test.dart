@@ -1,7 +1,9 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_plugin_example/flutter_plugin_example.dart';
-import 'package:flutter_plugin_example/flutter_plugin_example_platform_interface.dart';
-import 'package:flutter_plugin_example/flutter_plugin_example_method_channel.dart';
+import 'package:flutter_plugin_example/src/flutter_plugin_example_platform_interface.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+
+import 'package:flutter_plugin_example/src/flutter_plugin_example_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockFlutterPluginExamplePlatform
@@ -10,6 +12,16 @@ class MockFlutterPluginExamplePlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<void> init() {
+    // TODO: implement init
+    throw UnimplementedError();
+  }
+
+  @override
+  // TODO: implement timerStream
+  Stream<int> get timerStream => throw UnimplementedError();
 }
 
 void main() {

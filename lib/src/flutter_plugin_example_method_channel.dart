@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_plugin_example/src/flutter_plugin_example_platform_interface.dart';
 
-import 'flutter_plugin_example_platform_interface.dart';
 
 /// An implementation of [FlutterPluginExamplePlatform] that uses method channels.
 class MethodChannelFlutterPluginExample extends FlutterPluginExamplePlatform {
